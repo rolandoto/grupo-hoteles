@@ -1,0 +1,42 @@
+.video-iframe {
+  pointer-events: none;
+}
+
+.App{
+  display: flex;
+  margin: auto;
+  max-height: 1100px;
+  flex-direction: column;
+  background: #fff;
+  height: 100vh;
+  width: 100vw;
+  box-shadow: 0 0 50px rgba(0,0,0,.4);
+  overflow: auto;
+}
+
+.video-iframe, iframe{
+  width: 100%;
+  height: 100vh;
+  border: none;
+  transform: scale(1.1);
+}
+
+/* src/App.css */
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
