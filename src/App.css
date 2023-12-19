@@ -1,3 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 .video-iframe {
   pointer-events: none;
 }
@@ -5,30 +10,22 @@
 .App{
   display: flex;
   margin: auto;
-  max-height: 1100px;
   flex-direction: column;
   background: #fff;
-  height: 100vh;
   width: 100%;
+  height: auto;
   box-shadow: 0 0 50px rgba(0,0,0,.4);
-  overflow: auto;
-  overflow: hidden;
+
 }
 
 .video-iframe, iframe{
   width: 100%;
-  height: 100vh;
+  height: 110vh;
   border: none;
-  transform: scale(1.1);
+  transform: scale(1);
 }
 
-/* Media query para pantallas más pequeñas (por ejemplo, menos de 600px de ancho) */
-@media screen and (max-width: 600px) {
-  .video-iframe,
-  iframe {
-    transform: scale(2); /* Restaura la escala a 1 para pantallas más pequeñas */
-  }
-}
+
 /* src/App.css */
 .App {
   text-align: center;
@@ -76,7 +73,7 @@ nav li {
 .video-iframe,
 iframe {
   width: 100%;
-  height: 100vh;
+
   border: none;
   transform: scale(1.1);
 }
@@ -287,3 +284,65 @@ a{
   font-size: 10px;
 }
 
+
+
+.section {
+  scroll-snap-align: start;
+}
+
+
+.show-sections .sections {
+  display: none; /* Muestra las secciones cuando showSections es true */
+}
+
+
+
+.progress-container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 30px;
+  min-width: 100%;
+  width: 100%;
+  margin-top: 42px;
+  position: fixed;
+  z-index: 2;
+}
+.progress-container::before {
+  content: '';
+  background:black;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 100%;
+}
+
+.progress {
+  content: "";
+  background: #17c964;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 0;
+  transition: width 0.3s ease;
+  width: 50%;
+}
+.circle {
+  background-color: black;
+  color: #999;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .4s ease;
+  z-index: 1;
+}
+.circle.active {
+  background: #17c964;
+}

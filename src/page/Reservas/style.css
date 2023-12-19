@@ -1,0 +1,239 @@
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #333;
+    padding: 10px;
+    color: white;
+  }
+  
+  .navbar__item {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar__item label {
+    margin-right: 5px;
+  }
+  
+  .navbar__item input,
+  .navbar__item button {
+    padding: 5px;
+    margin-right: 10px;
+  }
+  
+  .navbar__item button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  .continainer-row-image{
+    cursor: pointer;
+  }
+
+  .button-google-map{
+    padding: 10px;
+    background: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    margin: auto;
+    border-radius: 11px;
+  }
+
+  .row-containe{
+    width: 10%;
+  }
+
+ 
+
+.row-container{
+  
+}
+  
+  .border-google-maps {
+    border: solid 1px #cbcbcb;
+    background-color: #EBEBEB;
+    border-radius: 28px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+    color: #222222;
+    height: 28px;
+    padding: 0px 8px;
+    position: relative;
+    transform: scale(1);
+    transform-origin: 50% 50%;
+    display: flex;
+    align-items: center;
+    width: 133%;
+    font-weight: 600;
+    transition: transform 200ms ease-in-out, z-index 200ms ease-in-out;
+    transform: translateX(-50%) translateY(50%);
+  transition: transform 0.3s ease;
+  
+  }
+  
+  .container-row-maps:hover .border-google-maps {
+    border: black;
+    background-color: black;;
+    border-radius: 28px;
+    box-shadow:  black;;
+    color:  white;;
+    height: 28px;
+    padding: 0px 8px;
+    position: relative;
+   
+    transition: background-color  black 200ms, transform 200ms  black  0s, box-shadow 200ms  black 0s;
+  }
+  
+  @keyframes grow {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .container-row-maps {
+    --content-mini-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.08), var(--e-swdx-p);
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    height: 28px;
+    
+    z-index: 1;
+  }
+  
+  .title-medium {
+    font-size: 100%;
+  }
+  
+  .gm-style-iw-tc{
+    display: none;
+  }
+
+
+  .gm-style .gm-style-iw-c{
+    position: absolute;
+    box-sizing: border-box;
+    overflow: hidden;
+    top: -20px;
+    left: -35px;
+    transform: translate3d(-50%,-100%,0);
+    background-color: white;
+    border-radius: 8px;
+    padding: 0;
+    box-shadow: 0 2px 7px 1px rgba(0,0,0,.3);
+    max-width: 291px !important;
+    height: auto
+  }
+
+  .gm-style .gm-style-iw-d {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: hidden !important;
+}
+
+
+.container-row-maps-active{
+  background: #222222;
+  color: white;
+ 
+}
+
+
+.container-row-maps-desative{
+  background: white;
+  color: black;
+  z-index: 1;
+}
+
+.foto-fija {
+ 
+  height: 180px; /* Define la altura deseada */
+  object-fit: cover; /* Mantiene la relación de aspecto y cubre completamente el contenedor */
+}
+
+.gm-ui-hover-effect{
+  color: white !important;
+  background-color: white;
+}
+.gm-ui-hover-effect>span{
+  background-color: white !important;
+  font-size: 20px !important;
+  width: 50px;
+}
+
+.gm-style img{
+  max-width: -webkit-fill-available !important; 
+}
+
+
+.content-\[\'\'\] {
+  width: 5px !important;
+    height: 5px !important;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 6; /* Corregido el valor de opacidad */
+    transform: translateY(0);
+  }
+}
+
+/* Aplicar animación a la clase 'reservation-rows' */
+.reservation-rows {
+  animation:fadeIn  2s ease 0s 1 normal none running eqyXIS;
+  /* Agregar prefijos de proveedores de animación para mayor compatibilidad */
+  -webkit-animation: fadeIn 0.9s ease-out;
+  -moz-animation: fadeIn 0.9s ease-out;
+  animation: fadeIn 0.9s ease-out;
+}
+
+
+.active-row{
+  z-index: 1000;
+}
+
+
+.active-of{
+  z-index: 1000;
+}
+
+
+.grid-container{
+  display: grid;
+  grid-template-columns: auto auto  ;
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+.item1 {
+  grid-area: 2 / 2;
+}
